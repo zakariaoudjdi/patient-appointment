@@ -1,4 +1,4 @@
-import AppointmentForm from "./AppointmentForm";
+import AppointmentForm from "../ui/AppointmentForm";
 import PageHeading from "../ui/PageHeading";
 
 function AppointmentPage() {

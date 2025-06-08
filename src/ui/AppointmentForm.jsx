@@ -6,12 +6,12 @@ import {
 } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { createAppointment } from "../api/createAppointment";
-import PatientInfoFields from "../ui/PatientInfoFields";
-import AppointmentDateField from "../ui/AppointmentDateField";
-import MorningTimeSlots from "../ui/MorningTimeSlots";
-import EveningTimeSlots from "../ui/EveningTimeSlots";
-import SubmitMessage from "../ui/SubmitMessage";
-import Spinner from "../ui/Spinner";
+import PatientInfoFields from "./PatientInfoFields";
+import AppointmentDateField from "./AppointmentDateField";
+import MorningTimeSlots from "./MorningTimeSlots";
+import EveningTimeSlots from "./EveningTimeSlots";
+import SubmitMessage from "./SubmitMessage";
+import Spinner from "./Spinner";
 import toast from "react-hot-toast";
 
 const queryClient = new QueryClient();
