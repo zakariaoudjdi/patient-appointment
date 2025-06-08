@@ -2,9 +2,7 @@ import { useForm } from "react-hook-form";
 import {
   QueryClient,
   QueryClientProvider,
-  useMutation,
 } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 import { createAppointment } from "../api/createAppointment";
 import PatientInfoFields from "./PatientInfoFields";
 import AppointmentDateField from "./AppointmentDateField";
@@ -13,6 +11,7 @@ import EveningTimeSlots from "./EveningTimeSlots";
 import SubmitMessage from "./SubmitMessage";
 import Spinner from "./Spinner";
 import toast from "react-hot-toast";
+import useNavigateMutation from "../hooks/useNavigateMutation";
 
 const queryClient = new QueryClient();
 
@@ -23,16 +22,17 @@ function AppointmentForm() {
     control,
     formState: { errors },
   } = useForm();
-  const navigate = useNavigate();
 
-  const mutation = useMutation({
-    mutationFn: createAppointment,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["appointments"] });
-      toast.success("Appointment set with success!");
-      navigate("/");
+  const mutation = useNavigateMutation(
+    createAppointment,
+    {
+      onSuccess: () => {
+        queryClient.invalidateQueries({ queryKey: ["appointments"] });
+        toast.success("Appointment set with success!");
+      },
     },
-  });
+    "/"
+  );
 
   function onSubmit(data) {
     console.log(data);

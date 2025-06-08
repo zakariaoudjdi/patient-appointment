@@ -1,4 +1,4 @@
-import { forwardRef, useRef } from "react";
+import { forwardRef } from "react";
 const Input = forwardRef(function Input(
   {
     label,
@@ -7,12 +7,10 @@ const Input = forwardRef(function Input(
     placeholder,
     Icon,
     type,
-
     ...props
   },
   ref,
 ) {
-  const inputRef = useRef()
   return (
     <div>
       <label
@@ -24,7 +22,7 @@ const Input = forwardRef(function Input(
       <div className="mt-2 grid grid-cols-1">
         <input
           {...props}
-          ref={inputRef}
+          ref={ref}
           id={id}
           name={name}
           type={type}

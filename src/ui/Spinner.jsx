@@ -2,7 +2,7 @@ function Spinner() {
   return (
     <div className="flex items-center justify-center">
       <svg
-        className="animate-spin h-8 w-8 text-fuchsia-500"
+        className="animate-spin h-14 w-14 text-fuchsia-500"
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 24 24"
