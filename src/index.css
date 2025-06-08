@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Inter", "sans-serif";
+  --font-body: "Karla", "sans-serif";
+}
+
+.react-datepicker {
+  border: 2px solid #fdd0ff !important;
+  border-radius: 0.8rem !important;
+  overflow: hidden;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.react-datepicker__month-container {
+  width: 100% !important;
+}
+
+.react-datepicker__header {
+  border-top-left-radius: 0.8rem !important;
+  border-top-right-radius: 0.8rem !important;
+  background: var(--primary-color, #fdefff) !important;
+  width: 100% !important;
+  border-bottom: 2px solid #fdd0ff !important;
+  font-size: 1rem !important; 
+  font-family: var(--font-display, "Helvetica", sans-serif) !important;
+}
+
+.react-datepicker__day {
+  font-size: 1.25rem !important;
+  font-family: var(--font-body, "Helvetica", sans-serif) !important;
+  color: #464646 !important;
+  padding: 0.5rem !important;
+  box-sizing: border-box;
+  width: 2.8rem !important;
+  height: 2.8rem !important;
+}
+.react-datepicker__day-names{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 1rem !important;
+}
+.react-datepicker__day-name {
+  font-size: 1.2rem !important;
+  font-family: var(--font-body, "Helvetica", sans-serif) !important;
+
+  box-sizing: border-box;
+}
+
+.react-datepicker__day--today {
+  font-size: 1.25rem !important;
+  font-family: var(--font-body, "Helvetica", sans-serif) !important;
+  background-color: #f644ff !important;
+  color: #ffffff !important; 
+  border-radius: 0.375rem !important; 
+}
+
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  font-size: 1.25rem !important;
+  font-family: var(--font-body, "Helvetica", sans-serif) !important;
+  background-color: hsl(306, 100%, 84%) !important;
+  color: #292929 !important;
+  border-radius: 0.375rem !important;
+}
