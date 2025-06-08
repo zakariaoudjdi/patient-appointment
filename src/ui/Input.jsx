@@ -1,4 +1,5 @@
 import { forwardRef } from "react";
+
 const Input = forwardRef(function Input(
   {
     label,
@@ -11,6 +12,7 @@ const Input = forwardRef(function Input(
   },
   ref,
 ) {
+
   return (
     <div>
       <label
@@ -23,6 +25,7 @@ const Input = forwardRef(function Input(
         <input
           {...props}
           ref={ref}
+ 
           id={id}
           name={name}
           type={type}
@@ -32,14 +35,7 @@ const Input = forwardRef(function Input(
 
         {Icon && (
           <Icon
-            onClick={(e) => {
-              e.stopPropagation();
-              if (inputRef.current) {
-                inputRef.current.focus();
-                inputRef.current.value = "";
-               
-              }
-            }}
+       
             aria-hidden="true"
             className="col-start-1 row-start-1 mr-4 size-6 cursor-pointer self-center justify-self-end text-fuchsia-400"
           />
