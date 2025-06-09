@@ -12,7 +12,7 @@ function AppLayout() {
         links={[
           { name: "Home", path: "/" },
           { name: "Appointment", path: "/appointment" },
-          { name: "Blog", path: "/blog" },
+          { name: "Blogs", path: "/blogs" },
           { name: "Contacts", path: "/contacts" },
         ]}
         isHomePage={isHomePage}

@@ -1,8 +1,5 @@
 import { useForm } from "react-hook-form";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createAppointment } from "../api/createAppointment";
 import PatientInfoFields from "./PatientInfoFields";
 import AppointmentDateField from "./AppointmentDateField";
@@ -31,7 +28,7 @@ function AppointmentForm() {
         toast.success("Appointment set with success!");
       },
     },
-    "/"
+    "/",
   );
 
   function onSubmit(data) {
@@ -41,7 +38,7 @@ function AppointmentForm() {
 
   if (mutation.isPending) {
     return (
-      <div className="flex justify-center items-center min-h-[300px]">
+      <div className="flex min-h-[300px] items-center justify-center">
         <Spinner />
       </div>
     );
