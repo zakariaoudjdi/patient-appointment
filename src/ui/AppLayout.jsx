@@ -1,5 +1,4 @@
 import { Outlet, useLocation } from "react-router-dom";
-
 import NavigationBar from "./NavigationBar";
 
 function AppLayout() {
@@ -7,7 +6,7 @@ function AppLayout() {
   const isHomePage = location.pathname === "/";
 
   return (
-    <div>
+    <>
       <NavigationBar
         links={[
           { name: "Home", path: "/" },
@@ -18,7 +17,7 @@ function AppLayout() {
         isHomePage={isHomePage}
       />
       <Outlet />
-    </div>
+    </>
   );
 }
 export default AppLayout;
